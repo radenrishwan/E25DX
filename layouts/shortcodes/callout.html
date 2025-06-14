@@ -1,0 +1,15 @@
+{{- $type := .Get "type" | default "info" -}}
+<div class="callout {{ $type }}">
+  {{- if eq $type "warning" -}}
+    <div class="callout-title">⚠️ Warning</div>
+  {{- else if eq $type "info" -}}
+    <div class="callout-title">ℹ️ Info</div>
+  {{- else if eq $type "note" -}}
+    <div class="callout-title">📝 Note</div>
+  {{- else if eq $type "tip" -}}
+    <div class="callout-title">💡 Tip</div>
+  {{- end -}}
+  <div class="callout-content">
+    {{ .Inner | markdownify }}
+  </div>
+</div>

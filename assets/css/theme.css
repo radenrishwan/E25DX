@@ -15,8 +15,11 @@
   --foreground: rgba(247, 247, 247, .25);
   --foreground-hover: rgba(220, 220, 220, .35);
 
-  --foreground-highlight: #f5d41f;
-  --color-highlight: #130606;
+  /* --foreground-highlight: #f5d41f;
+  --color-highlight: #130606; */
+
+   --foreground-highlight: #64ffda;
+  --color-highlight: #000000;
 
   --model-background: #ffffff;
   --model-foreground: rgba(247, 247, 247, .25);
@@ -55,11 +58,24 @@
   --chroma-base0F: #a3685a;
 
   /* shortcodes */
-  --callout-info-backgound: #954ce3;
-  --callout-info-foreground: rgba(0, 0, 0, .08);
-  --callout-info-color: #ffffff;
-  --callout-info-anchor: #d2aefc;
-  --callout-info-anchor-text-shadow: .4px 0 .8px black;
+  --callout-warning-background: #c85a65;
+  --callout-warning-foreground: rgba(200, 90, 101, 0.1);
+  --callout-warning-color: #5a1f23;
+  --callout-warning-anchor: #8b3339;
+  --callout-warning-anchor-text-shadow: .4px 0 .8px rgba(0,0,0,0.3);
+
+  /* Background overlay for light mode */
+  --background-overlay: rgba(255, 255, 255, 0.7);
+
+  /* Footer styling for light mode */
+  --footer-background: rgba(255, 255, 255, 0.8);
+  --footer-info-background: rgba(247, 247, 247, 0.5);
+  --footer-controls-background: rgba(255, 255, 255, 0.6);
+  
+  /* Theme toggle button styling */
+  --theme-toggle-background: rgba(255, 255, 255, 0.9);
+  --theme-toggle-border: rgba(0, 0, 0, 0.1);
+  --theme-toggle-hover-background: rgba(240, 240, 240, 0.9);
 }
 
 :root[data-color="dark"] {
@@ -73,6 +89,9 @@
 
   --foreground: rgba(19, 19, 19, 1);
   --foreground-hover: rgba(35, 35, 35, 1);
+
+  --foreground-highlight: #64ffda;
+  --color-highlight: #000000;
 
   --model-background: rgba(16, 16, 16, 1);
   --model-foreground: rgba(225, 225, 225, .05);
@@ -101,6 +120,18 @@
   --chroma-base0D: #6699cc;
   --chroma-base0E: #cc99cc;
   --chroma-base0F: #a3685a;
+
+  --background-overlay: rgba(16, 16, 16, 0.8);
+
+  /* Footer styling for dark mode */
+  --footer-background: rgba(16, 16, 16, 0.9);
+  --footer-info-background: rgba(30, 30, 30, 0.8);
+  --footer-controls-background: rgba(25, 25, 25, 0.7);
+  
+  /* Theme toggle button styling for dark mode */
+  --theme-toggle-background: rgba(40, 40, 40, 0.9);
+  --theme-toggle-border: rgba(255, 255, 255, 0.2);
+  --theme-toggle-hover-background: rgba(60, 60, 60, 0.9);
 }
 
 .site-logo {
@@ -111,9 +142,11 @@
   -webkit-text-stroke: .5px var(--border);
   background: transparent;
   letter-spacing: 3px;
-  background: linear-gradient(45deg, #866ee7, #ea60da, #ed8f57, #fbd41d, #2cca91);
+  /* background: linear-gradient(45deg, #866ee7, #ea60da, #ed8f57, #fbd41d, #2cca91); */
+   background: linear-gradient(45deg, #64ffda, #ea60da, #ed8f57, #64ffda, #2cca91);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-weight: 800;
 }
+
